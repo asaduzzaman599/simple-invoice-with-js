@@ -12,12 +12,12 @@
     <main class="container"> 
         <section class=" m-5 ">
             <div class="row">
-                <div class="col-12 col-md-8 bg-success p-3 rounded mx-auto">
+                <div class="col-12 col-md-8 bg-success px-3 py-4 rounded mx-auto">
                     <div class="input-group">
-                        <textarea class="form-control" aria-label="With textarea"></textarea>
-                        <button class="input-group-text btn btn-primary">With textarea</button>
+                        <textarea class="form-control" id="detail-input" aria-label="With textarea"></textarea>
+                        <button id="submit-button" class="input-group-text btn btn-primary">Submit</button>
                       </div>
-                      <h2 class="fs-5 text p-1 m-1 bg-danger text-center rounded">Enter Item Detail</h2>
+                      <h2 class="fs-5 text p-1 m-2 bg-danger text-center rounded">Enter Item Detail</h2>
                       <div class=".row">
                         <div class="col-md-8 col-12 mx-auto ">
                             <div class="input-group mb-3">
@@ -45,31 +45,64 @@
             <hr>
             <div class="row gx-5 p-5 text-center">
                 <div class="col-4">
-                    <div class="bg-info p-3 ">
+                    <div class="bg-info p-3 rounded">
                         <p>Date: <span id="date"></span></p>
                     </div>
                 </div>
                 <div class="col-4">
-                    <div class="bg-info p-3 ">
+                    <div class="bg-info p-3 rounded">
                         <p class="text-warning">Invoice To</p>
-                        <p id="invoice-product"></p>
+                        <p  id="buyer-info"></p>
                     </div>
                 </div>
                 <div class="col-4">
-                    <div class="bg-info p-3 ">
+                    <div class="bg-info p-3  rounded">
                         <p class="text-warning">Saller</p>
                         <p></p>
 
                     </div>
                 </div>
             </div>
+            <div class="table-content px-5">
+                <table class="table bg-white rounded">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">First</th>
+                        <th scope="col">Last</th>
+                        <th scope="col">Handle</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">3</th>
+                        <td colspan="2">Larry the Bird</td>
+                        <td>@twitter</td>
+                      </tr>
+                    </tbody>
+                     </thead>
+                    <tbody>
+                     
+                   
+                    <tr>
+                        <td colspan="3" class="text-end fw-bold">SubTotal</td>
+                        <td class="text-right" >$<span id="sub-total">0</span></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" class="text-end fw-bold">Tax</td>
+                        <td class="text-right" >$ <span id="tax">0</span></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" class="text-end fw-bold">Grand Total</td>
+                        <td class="text-right fw-bold" >$ <span id="grand-total">0</span> </td>
+                    </tr>
+                    </tbody>
+                  </table>
+            </div>
         </section>
     </main>
     
-    <script>
-        const date = new Date;
-        const today = date.toLocaleDateString();
-        document.getElementById('date').innerText = today;
+    <script src="js/script.js">
     </script>
 </body>
 </html>
