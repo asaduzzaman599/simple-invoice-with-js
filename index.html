@@ -12,27 +12,27 @@
     <main class="container"> 
         <section class=" m-5 ">
             <div class="row">
-                <div class="col-12 col-md-8 bg-success px-3 py-4 rounded mx-auto">
+                <div class="col-12 col-md-8 bg-dark px-3 py-4 rounded mx-auto">
                     <div class="input-group">
-                        <textarea class="form-control" id="detail-input" aria-label="With textarea"></textarea>
+                        <textarea class="form-control" id="detail-input" aria-label="With textarea" placeholder="Order Details Information"></textarea>
                         <button id="submit-button" class="input-group-text btn btn-primary">Submit</button>
                       </div>
-                      <h2 class="fs-5 text p-1 m-2 bg-danger text-center rounded">Enter Item Detail</h2>
+                      <h2 class="fs-5 text p-1 m-2 bg-info text-center rounded">Enter Item Detail</h2>
                       <div class=".row">
                         <div class="col-md-8 col-12 mx-auto ">
                             <div class="input-group mb-3">
                                 <span class="input-group-text" id="basic-addon2">Item Name</span>
-                                <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                                <input id="name" type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
                               </div>
                               <div class="input-group mb-3">
                                 <span class="input-group-text" id="basic-addon2">Price</span>
-                                <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                                <input id="price" type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
                               </div>
                               <div class="input-group mb-3">
                                 <span class="input-group-text" id="basic-addon2">Quantity</span>
-                                <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                                <input id="quantity" type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
                               </div>
-                              <button class="btn btn-primary ">Add</button>
+                              <button id="add-item-btn" class="btn btn-primary ">Add</button>
                         </div>
                       </div>
                 </div>
@@ -40,24 +40,26 @@
 
         </section>
 
-        <section class="p-3 bg-primary rounded text-white">
+        <section class="p-3 bg-dark rounded text-white">
             <h2>Invoice: <span>#1721599</span></h2>
             <hr>
             <div class="row gx-5 p-5 text-center">
                 <div class="col-4">
-                    <div class="bg-info p-3 rounded">
+                    <div class="bg-primary p-3 rounded fw-bold">
                         <p>Date: <span id="date"></span></p>
                     </div>
                 </div>
                 <div class="col-4">
-                    <div class="bg-info p-3 rounded">
-                        <p class="text-warning">Invoice To</p>
-                        <p  id="buyer-info"></p>
+                    <div class="bg-primary p-3 rounded">
+                        <p class="text-warning fw-bold">Invoice To</p>
+                        <div class="w-75 mx-auto bg-white">
+                        <p  id="buyer-info" class="text-dark"></p>
+                    </div>
                     </div>
                 </div>
                 <div class="col-4">
-                    <div class="bg-info p-3  rounded">
-                        <p class="text-warning">Saller</p>
+                    <div class="bg-primary p-3  rounded">
+                        <p class="text-warning fw-bold">Saller</p>
                         <p></p>
 
                     </div>
@@ -67,17 +69,17 @@
                 <table class="table bg-white rounded">
                     <thead>
                       <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">First</th>
-                        <th scope="col">Last</th>
-                        <th scope="col">Handle</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Quantity</th>
+                        <th scope="col">Total</th>
                       </tr>
                     </thead>
-                    <tbody>
+                    <tbody id="item-data">
                       <tr>
-                        <th scope="row">3</th>
+                        <!-- <th scope="row">3</th>
                         <td colspan="2">Larry the Bird</td>
-                        <td>@twitter</td>
+                        <td>@twitter</td> -->
                       </tr>
                     </tbody>
                      </thead>
@@ -101,6 +103,8 @@
             </div>
         </section>
     </main>
+
+    <footer class="p-2 bg-primary mt-5 text-light text-center">copyright &copy;.  All rights reserved. </footer>
     
     <script src="js/script.js">
     </script>
