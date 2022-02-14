@@ -22,7 +22,13 @@ document.getElementById('add-item-btn').addEventListener('click', function () {
     const price = Number(priceInput.value);
     const quantity = Number(quantityInput.value);
     const buyerInfo =document.getElementById('buyer-info').innerText;
-    if (buyerInfo != '' && nameInput.value != '' && price > 0 && quantity >0) {
+
+    if( buyerInfo == '' ){
+
+        alert('Enter Buyer Info Please.')
+    }
+
+    if ( nameInput.value != '' && price > 0 && quantity >0) {
         totalPrice = price * quantity;
         const tr = document.createElement('tr');
         const tbody = document.getElementById('item-data');
@@ -48,9 +54,7 @@ document.getElementById('add-item-btn').addEventListener('click', function () {
         document.getElementById('sub-total').innerText = subTotal;
         document.getElementById('tax').innerText = tax;
         document.getElementById('grand-total').innerText = tax + subTotal;
-    }else if( buyerInfo == '' ){
-
-        alert('Enter Buyer Info Please.')
+        
     }else if( nameInput.value == '' ){
 
         alert('Enter The item name Please.')
